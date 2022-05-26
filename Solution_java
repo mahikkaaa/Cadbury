@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class hello {
+    static int cadbury(int min_length, int max_length, int min_width, int max_width){
+        int count = 0;
+    int i,j;
+    int x,y;
+    int temp;
+
+    for(i= min_length; i<= max_length; i++){
+        for(j=min_width; j<=max_width; j++){
+            x=i;
+            y=j;
+
+            while(x>1 && y>1){
+                if (x>y){
+                    count++;
+                    x-=y;
+                }
+                else{
+                    count++;
+                    y-=x;
+                }
+            }
+
+            if (x==1 && y!=1){
+                count+=y;
+            }
+            else if (y==1 && x!=1){
+                count+=x;
+            }
+
+            else if (x==1 && y==1){
+                count+=1;
+            }
+        }
+    }
+    return count;
+    }
+    public static void main (String[] args){
+        int min_length, max_length, min_width, max_width;
+
+        Scanner input = new Scanner (System.in);
+        System.out.println("enter the minimum length and width and maximum length and width of the cadbury as follows" );
+        System.out.println("enter the minimum length");
+        min_length= input.nextInt();
+        System.out.println("enter the maximum length");
+        max_length=input.nextInt();
+        System.out.println("enter the minimum width");
+        min_width=input.nextInt();
+        System.out.println("enter the maximum width");
+        max_width=input.nextInt();
+
+        System.out.println(cadbury(min_length, max_length, min_width, max_width));
+    }
+
+
+}
