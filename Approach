@@ -1,0 +1,10 @@
+create a method cadbury which takes 4 arguements - min_length, max_length, min_width, max_width
+initialize another variable as count with value 0
+start for loop with i value from min_length to max_length
+add another nested loop with j value ranging from min_width to max_width
+assign i to x and j to y
+now we start while loop, when x and y are greater than 1 if x is greater than y, inncrement count and remove y from x else remove x from y and increment count
+now outside while, if x and y are equal, then add 1 to count, since the peice cannot be broken further
+if y=1 and x is not equal to 1 then add x to count else add y to count
+exit both the loops ( for and while ) and return count
+in main method prompt the user to add inputs for minimum and maximum length and width of the dimension of the cadbury
